@@ -1,10 +1,16 @@
-require 'sinatra'
+require 'sinatra/base'
 
-get '/' do
-  name = %w[Ben Jenny Cleo Daria].sample
-  "Hello #{name}"
-end
+class Battle < Sinatra::Base
 
-get '/:name' do
-  "Hello #{params['name']}!"
+  get '/' do
+    "Hello Battle!"
+  end
+
+  # get '/' do
+  #   name = %w[Ben Alex Agata Tom].sample
+  #   "Hello #{name}"
+  # end
+
+  # start the server if ruby file executed directly
+  run! if app_file == $PROGRAM_NAME
 end
