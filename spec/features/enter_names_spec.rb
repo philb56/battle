@@ -1,6 +1,6 @@
 feature 'Testing Home Page' do
-  scenario 'Testing infrastructure working!' do
+  scenario '#homepage' do
     visit '/'
-    expect(page).to have_content 'Hello Battle!'
+    expect(page).to have_content 'Testing infrastructure working!'
   end
 end

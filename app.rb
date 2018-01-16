@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class Battle < Sinatra::Base
   get '/' do
-    'Hello Battle!'
+    'Testing infrastructure working!'
   end
   # get '/' do
   #   name = %w[Ben Alex Agata Tom].sample
