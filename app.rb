@@ -1,11 +1,9 @@
 require 'sinatra/base'
 
 class Battle < Sinatra::Base
-
   get '/' do
-    "Hello Battle!"
+    'Hello Battle!'
   end
-
   # get '/' do
   #   name = %w[Ben Alex Agata Tom].sample
   #   "Hello #{name}"
