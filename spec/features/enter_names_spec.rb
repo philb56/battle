@@ -6,9 +6,9 @@ feature '#Homepage' do
 
   scenario 'should expect players to fill in names' do
     visit '/'
-    fill_in "player_1_name", with: "Benjamin"
-    fill_in "player_2_name", with: "Alexandra"
-    click_button "Submit"
-    expect(page).to have_text("Benjamin vs. Alexandra")
+    fill_in 'player_1_name', with: 'Benjamin'
+    fill_in 'player_2_name', with: 'Alexandra'
+    click_button 'Submit'
+    expect(page).to have_text('Benjamin vs. Alexandra')
   end
 end
