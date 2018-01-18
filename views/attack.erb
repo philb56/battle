@@ -4,3 +4,11 @@
 <div>
   <%= @game.player_2.player_name %>'s score is: <%= @game.player_2.score %> HP
 </div>
+
+<div>
+  <%=@game.current_turn.player_name%>'s turn
+</div>
+
+<form action="/attack" method="submit">
+  <input type="submit" value="Ok">
+</form>

@@ -6,11 +6,7 @@ class Player
     @player_name = name
     @score = DEFAULT_SCORE
   end
-
-  # def attack(player)
-  #   player.under_attack
-  # end
-
+ 
   def receive_damage
     @score -= 10
   end
