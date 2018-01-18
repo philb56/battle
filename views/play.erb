@@ -1,6 +1,6 @@
-<div><%= $game.player_1.player_name %> vs. <%= $game.player_2.player_name %></div>
+<div><%= @game.player_1.player_name %> vs. <%= @game.player_2.player_name %></div>
 
-<div><%= $game.player_2.player_name %>: 100 HP</div>
+<div><%= @game.player_2.player_name %>: <%= @game.player_2.score %> HP</div>
 
 <div>
   <%=@game.current_turn.player_name%>'s turn
