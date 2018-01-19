@@ -15,6 +15,10 @@ class Game
   end
 
   def attack
+    # p "attack"
+    # p @current_turn
+    # p opponent_of(@current_turn)
+    # p "/attack"
     opponent_of(@current_turn).receive_damage
   end
 
