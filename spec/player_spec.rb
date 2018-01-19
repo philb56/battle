@@ -13,8 +13,8 @@ describe Player do
     expect(player1.score).to eq 100
   end
 
-  # it 'Should reduce player score by 10' do
-  #   player1.attack(player2)
-  #   expect(player2.score).to eq 90
-  # end
+  it 'Should reduce player score by 10' do
+    player1.receive_damage
+    expect(player1.score).to eq 90
+  end
 end

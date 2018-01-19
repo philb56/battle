@@ -6,15 +6,9 @@ describe Game do
   let(:name)              { 'Ben' }
   subject(:game)          {described_class.new(player_1,player_2)}
 
-  it "Should attack player " do
-    #player_1 = Player.new('Ben')
-    #game.attack(player_1)
-    expect(game.attack(player_1)).to eq 90
-  end
-
   it 'damages the player' do
     expect(player_2).to receive(:receive_damage)
-    game.attack(player_2)
+    game.attack
   end
 
   describe '#player_1' do
