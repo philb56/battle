@@ -26,4 +26,12 @@ feature '#Play-Page' do
     expect(page).to have_text('Ben: 90 HP')
     expect(page).to have_text('Alex: 90 HP')
   end
+
+  scenario 'Should see lose messge for player' do
+    sign_in_and_play
+    attack_and_ok(19)
+    expect(page).to have_text('Alex loses!')
+    expect(page).to have_text('Ben: 10 HP')
+    expect(page).to have_text('Alex: 0 HP')
+  end
 end

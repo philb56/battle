@@ -5,3 +5,10 @@ def sign_in_and_play
   fill_in 'player_2_name', with: 'Alex'
   click_button 'Submit'
 end
+
+def attack_and_ok(attack_count)
+  attack_count.times do
+    click_button 'Attack'
+    click_button 'Ok'
+  end
+end

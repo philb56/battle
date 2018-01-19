@@ -1,6 +1,14 @@
 class Game
   attr_reader :current_turn
 
+  def self.new_game(player_1, player_2)
+    @game_instance = Game.new(player_1, player_2)
+  end
+
+  def self.game_instance
+    @game_instance
+  end
+
   def initialize(player_1, player_2)
     @players = [player_1, player_2]
     @current_turn = player_1
@@ -15,10 +23,6 @@ class Game
   end
 
   def attack
-    # p "attack"
-    # p @current_turn
-    # p opponent_of(@current_turn)
-    # p "/attack"
     opponent_of(@current_turn).receive_damage
   end
 

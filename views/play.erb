@@ -3,12 +3,15 @@
 <div><%= @game.player_1.player_name %>: <%= @game.player_1.score %> HP</div>
 <div><%= @game.player_2.player_name %>: <%= @game.player_2.score %> HP</div>
 
-<div>
-  <%=@game.current_turn.player_name%>'s turn
-</div>
-
-<div>
-  <form action="/attack">
-    <input type="submit" value="Attack">
-  </form>
-</div>
+<% if @game.current_turn.score == 0 %>
+  <%=@game.current_turn.player_name%> loses!
+<% else %>
+  <div>
+    <%=@game.current_turn.player_name%>'s turn
+  </div>
+  <div>
+    <form action="/attack">
+      <input type="submit" value="Attack">
+    </form>
+  </div>
+<% end %>
